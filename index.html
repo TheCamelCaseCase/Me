@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kurze Seitenbeschreibung (max ~160 Zeichen)" />
+  <title>Seitentitel</title>
+
+  <!-- Favicons / Web App -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Optional: Basis-Styles -->
+  <style>
+    /* Minimaler CSS-Reset */
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;line-height:1.5;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    img,svg,video{max-width:100%;display:block;height:auto}
+  </style>
+</head>
+<body>
+
+  <!-- Seitenkopf -->
+  <header>
+    <div class="branding">
+      <a href="/" rel="home">
+        <img src="/logo.svg" alt="Firmenlogo" width="120" height="32" />
+      </a>
+      <h1>Seitentitel oder Markenname</h1>
+    </div>
+
+    <!-- Hauptnavigation -->
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hauptinhalt: pro Seite genau EIN <main> -->
+  <main id="start">
+    <!-- Hero/Intro als Abschnitt -->
+    <section aria-labelledby="intro-heading">
+      <h2 id="intro-heading">Willkommen</h2>
+      <p>Kurzer Introtext zur Seite.</p>
+
+      <!-- Beispiel: Abbildung mit Bildunterschrift -->
+      <figure>
+        <img src="/bilder/beispiel.jpg" alt="Beschreibung des Bildinhalts" />
+        <figcaption>Ein erklärender Untertitel zur Abbildung.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Inhaltsbereich mit Artikel(n) -->
+    <section id="blog" aria-labelledby="blog-heading">
+      <h2 id="blog-heading">Aktuelle Beiträge</h2>
+
+      <article aria-labelledby="post-1-title">
+        <header>
+          <h3 id="post-1-title">Ein Artikel-Titel</h3>
+          <p>
+            <time datetime="2025-09-06">6. September 2025</time>
+            · von <span rel="author">Max Beispiel</span>
+          </p>
+        </header>
+
+        <p>Ein kurzer Überblick über den Inhalt des Artikels.</p>
+
+        <!-- Ergänzende, aber nicht zentrale Inhalte -->
+        <aside aria-label="Zusatzinfo">
+          <p>Tipp: weiterführende Links oder Randnotizen.</p>
+        </aside>
+
+        <footer>
+          <p>Kategorien: <a href="#">Web</a>, <a href="#">HTML</a></p>
+        </footer>
+      </article>
+    </section>
+
+    <!-- Leistungen/Features -->
+    <section id="leistungen" aria-labelledby="leistungen-heading">
+      <h2 id="leistungen-heading">Leistungen</h2>
+      <ul>
+        <li><strong>Beratung:</strong> Kurze Beschreibung.</li>
+        <li><strong>Entwicklung:</strong> Kurze Beschreibung.</li>
+        <li><strong>Schulung:</strong> Kurze Beschreibung.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Seitenfuß -->
+  <footer>
+    <section aria-labelledby="kontakt">
+      <h2 id="kontakt">Kontakt</h2>
+      <address>
+        Musterfirma GmbH<br />
+        Musterstraße 1<br />
+        12345 Musterstadt<br />
+        <a href="tel:+491234567890">+49 123 4567890</a><br />
+        <a href="mailto:hallo@musterfirma.de">hallo@musterfirma.de</a>
+      </address>
+    </section>
+
+    <nav aria-label="Fußnavigation">
+      <ul>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/datenschutz">Datenschutz</a></li>
+        <li><a href="/agb">AGB</a></li>
+      </ul>
+    </nav>
+
+    <p><small>&copy; <span id="jahr">2025</span> Musterfirma. Alle Rechte vorbehalten.</small></p>
+  </footer>
+
+  <!-- Skripte möglichst am Ende, mit defer -->
+  <script defer>
+    // Beispiel: Jahr automatisch setzen
+    document.getElementById('jahr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
